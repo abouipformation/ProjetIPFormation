@@ -1,16 +1,11 @@
+port_folio:
+    resource: "@PortFolioBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
-
-product_homepage:
-    path: /hello
-    defaults:
-        _controller: ProductBundle:Default:homepage
-
-product_show:
-    path: /product/{id}
-    defaults:
-        _controller: ProductBundle:Product:show
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

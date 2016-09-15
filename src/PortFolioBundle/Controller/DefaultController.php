@@ -1,6 +1,6 @@
 <?php
 
-namespace ProductBundle\Controller;
+namespace PortFolioBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -10,8 +10,8 @@ class DefaultController extends Controller
     /**
      * @Route("/")
      */
-    public function homepageAction()
+    public function indexAction()
     {
-        return $this->render('ProductBundle:Default:index.html.twig');
+        return $this->render('PortFolioBundle:Default:index.html.twig');
     }
 }
