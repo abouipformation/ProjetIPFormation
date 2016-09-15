@@ -1,7 +1,47 @@
 {% extends "base.html.twig" %}
 {% block title %}Contact{% endblock %}
  {% block body %}
+     <div class="row">
+         <div class="col-md-offset-2 col-md-8">
+             {{ form_start(form_contact, {'attr': {'class': 'form-horizontal'}}) }}
+                 <div class="form-group">
+                     <div class="col-md-2">
+                         {{ form_label(form_contact.object, '', {'attr_label': {'class': ''}}) }}
+                     </div>
+                     <div class="col-md-8">
+                         {{ form_widget(form_contact.object, {'attr': {'class': 'form-control'}}) }}
+                     </div>
+                     {{ form_errors(form_contact.object) }}
+                 </div>
 
+                 <div class="form-group">
+                    <div class="col-md-2">
+                        {{ form_label(form_contact.email, '', {'attr_label': {'class': ''}}) }}
+                    </div>
+                     <div class="col-md-8">
+                         {{ form_widget(form_contact.email, {'attr': {'class': 'form-control'}}) }}
+                     </div>
+                     {{ form_errors(form_contact.email) }}
+                 </div>
+
+                 <div class="form-group">
+                     <div class="col-md-2">
+                         {{ form_label(form_contact.comments, '', {'attr_label': {'class': ''}}) }}
+                     </div>
+                     <div class="col-md-8">
+                         {{ form_widget(form_contact.comments, {'attr': {'class': 'form-control'}}) }}
+                     </div>
+                     {{ form_errors(form_contact.comments) }}
+                 </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-2">
+                        <button type="submit" class="btn btn-primary">Valider</button>
+                    </div>
+                </div>
+             {{ form_end(form_contact, {'render_rest' : false}) }}
+
+         </div>
+     </div>
  {% endblock %}
 
  {% block javascripts %}
